@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Rayvora — Find the cooler side of your journey</title>
+  <meta name="description" content="Rayvora calculates which side of your journey gets less direct sunlight, helping you choose a more comfortable seat.">
+  <link rel="canonical" href="https://rayvora.app/">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="sunmark">☀</span><span>Rayvora</span></a>
+  <nav>
+    <a href="about.html">About</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="signin.html">Sign in</a>
+  </nav>
+</header>
+
+<main class="hero">
+  <section class="intro">
+    <div class="sun-illustration" aria-hidden="true"><div class="sun-core"></div><div class="rays"></div></div>
+    <h1>Find your<br><strong>cooler side.</strong></h1>
+    <p>Choose the side of your bus, train or car that gets less direct sunlight.</p>
+  </section>
+
+  <section class="card" aria-label="Journey planner">
+    <div class="field-row">
+      <span class="pin">●</span>
+      <div class="field">
+        <label for="from">From</label>
+        <input id="from" autocomplete="off" placeholder="Enter departure">
+        <div id="fromList" class="suggestions"></div>
+      </div>
+      <button class="loc" id="useLocation" title="Use current location">◎</button>
+    </div>
+    <div class="route-line"></div>
+    <div class="field-row">
+      <span class="pin">●</span>
+      <div class="field">
+        <label for="to">To</label>
+        <input id="to" autocomplete="off" placeholder="Enter destination">
+        <div id="toList" class="suggestions"></div>
+      </div>
+    </div>
+
+    <div class="timebox">
+      <label for="departureTime">Departure</label>
+      <input id="departureTime" type="datetime-local">
+    </div>
+
+    <button class="primary" id="findBtn">Find the shade →</button>
+    <p class="fine">Your locations are used only to calculate the journey. No account is required.</p>
+  </section>
+
+  <section id="result" class="result hidden"></section>
+</main>
+
+<footer>© 2026 Rayvora · <a href="about.html">About</a> · <a href="privacy.html">Privacy</a></footer>
+<script src="app.js"></script>
+</body>
+</html>
